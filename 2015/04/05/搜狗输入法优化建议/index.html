@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>搜狗输入法&amp;微信优化建议 | Yang xiaolei&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="搜狗输入法
+时间：2015.4.5版本：iOS 2.1.1随着iOS8在输入法方面的开放，国内用户终于不用越狱也可以拥有更好的输入体验了。目前，在第三方输入法方面，搜狗的份额无疑是最高的。也获得苹果官方的年度推荐。就我个人体验而言，喜欢搜狗要多余百度和番茄，特别是九宫格滑行输入，显示了搜狗在输入法方面的多年积淀。但是搜狗可优化的地方还是很多。下面是我自身的感受和优化建议：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搜狗输入法&微信优化建议">
+<meta property="og:url" content="http://yangxiaolei.me/2015/04/05/搜狗输入法优化建议/">
+<meta property="og:site_name" content="Yang xiaolei's blog">
+<meta property="og:description" content="搜狗输入法
+时间：2015.4.5版本：iOS 2.1.1随着iOS8在输入法方面的开放，国内用户终于不用越狱也可以拥有更好的输入体验了。目前，在第三方输入法方面，搜狗的份额无疑是最高的。也获得苹果官方的年度推荐。就我个人体验而言，喜欢搜狗要多余百度和番茄，特别是九宫格滑行输入，显示了搜狗在输入法方面的多年积淀。但是搜狗可优化的地方还是很多。下面是我自身的感受和优化建议：">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="搜狗输入法&微信优化建议">
+<meta name="twitter:description" content="搜狗输入法
+时间：2015.4.5版本：iOS 2.1.1随着iOS8在输入法方面的开放，国内用户终于不用越狱也可以拥有更好的输入体验了。目前，在第三方输入法方面，搜狗的份额无疑是最高的。也获得苹果官方的年度推荐。就我个人体验而言，喜欢搜狗要多余百度和番茄，特别是九宫格滑行输入，显示了搜狗在输入法方面的多年积淀。但是搜狗可优化的地方还是很多。下面是我自身的感受和优化建议：">
+
+  
+    <link rel="alternative" href="/atom.xml" title="Yang xiaolei&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img lazy-src="/img/DSCN0520_meitu_1.jpg" class="js-avatar">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">杨晓磊</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">让知识成为信仰，让优秀成为习惯</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="weibo" target="_blank" href="http://weibo.com/3547961937/profile?topnav=1&wvr=6" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/lance-yang-56" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto://god@yangxiaolei.me" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/App/" style="font-size: 14.00px;">App</a><a href="/tags/Hexo/" style="font-size: 16.00px;">Hexo</a><a href="/tags/markdown/" style="font-size: 10.00px;">markdown</a><a href="/tags/个人思考/" style="font-size: 18.00px;">个人思考</a><a href="/tags/交互设计/" style="font-size: 10.00px;">交互设计</a><a href="/tags/产品分析/" style="font-size: 20.00px;">产品分析</a><a href="/tags/基础知识/" style="font-size: 10.00px;">基础知识</a><a href="/tags/用户体验/" style="font-size: 12.00px;">用户体验</a><a href="/tags/瞎鼓捣/" style="font-size: 10.00px;">瞎鼓捣</a><a href="/tags/竞品分析/" style="font-size: 10.00px;">竞品分析</a><a href="/tags/笔面试题/" style="font-size: 18.00px;">笔面试题</a><a href="/tags/读书笔记/" style="font-size: 12.00px;">读书笔记</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">半吊子PM、帝都土著、伪果粉、真诺粉、长旅行、爱公益、10+years篮球迷</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">杨晓磊</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/DSCN0520_meitu_1.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">杨晓磊</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">让知识成为信仰，让优秀成为习惯</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="weibo" target="_blank" href="http://weibo.com/3547961937/profile?topnav=1&wvr=6" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/lance-yang-56" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto://god@yangxiaolei.me" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-搜狗输入法优化建议" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/04/05/搜狗输入法优化建议/" class="article-date">
+  	<time datetime="2015-04-05T13:18:59.000Z" itemprop="datePublished">Apr 5 2015</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      搜狗输入法&amp;微信优化建议
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人思考/">个人思考</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品分析/">产品分析</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="搜狗输入法">搜狗输入法</h2>
+<p>时间：2015.4.5<br>版本：iOS 2.1.1<br>随着iOS8在输入法方面的开放，国内用户终于不用越狱也可以拥有更好的输入体验了。目前，在第三方输入法方面，搜狗的份额无疑是最高的。也获得苹果官方的年度推荐。就我个人体验而言，喜欢搜狗要多余百度和番茄，特别是九宫格滑行输入，显示了搜狗在输入法方面的多年积淀。但是搜狗可优化的地方还是很多。下面是我自身的感受和优化建议：<br><a id="more"></a></p>
+<ul>
+<li>九宫格滑行输入时，如果起始位置在数字键和中英切换键。那么滑行结束后，会与单击该键的功能相同。容易引发用户误操作。应该变更其实点为就近的九宫格。</li>
+<li>滑行输入开启后，无法移动光标位置。移动光标是用户的痛点，个人建议增加其他入口为移动点，或变更其他交互方式。</li>
+<li>中文九宫格界面的自定义符号为特色，但是目前没有备份机制，更新或者重装后，需要重新设置。这里希望能够整合云备份。最好保证用户登录账户后，在多终端体验一致。</li>
+<li>键盘弹出速度，经过反复对比，比如原生和百度。原生的绝对速度一般，但是最为流畅，而百度速度更快。这点搜狗还需要加强。</li>
+<li>误触中英文切换键，原有所有输入都消失，此处需考虑用户误切换数据，如果过高则需要考虑进行相应变更。</li>
+<li>候选字大小最好可以用户调整</li>
+<li>大写键，最好点击一次单个大写，两次全部大写</li>
+<li>PC端安卓端账号云同步</li>
+<li>希望增加长按空格语音输入，与安卓版一致</li>
+</ul>
+<h2 id="微信">微信</h2>
+<p>时间：2015.4.5<br>版本：iOS 6.1.2<br>微信应该是我国用户量最大的app了。但不是说他就没有优化的空间，考虑到自己平时使用过程中出现的痛点，总结了一些可以优化的点，以及个人设计的解决方案：</p>
+<ul>
+<li><p>用户处在朋友圈界面时，收到微信im信息。此时在iPhone上无通知栏提示、无呼吸灯提示、只有声音提示，用户很容易遗漏信息，并且也无法快速的跳转到信息页面，只能一层层返回到发现tab，再切换到微信tab。<br><strong>解决方案</strong>：用户收到信息后，在朋友圈顶栏右侧增加“新消息提示”字样以及数量、用户点击后可快速跳转到聊天页面。</p>
+</li>
+<li><p>微信从移动端发家，现在延伸到多端后，多端联动还需要加强。用户在使用mac或者windows客户端登录后，需要手动关闭消息提示，一旦离开电脑前，常常忘记开启提示。一天内可能需要多次反复操作。<br><strong>解决方案</strong>：</p>
+<ol>
+<li>在消息页面可直接操作消息通知开关。</li>
+<li>当用户在短时间内在电脑端有微信软件操作时，收到信息首先只推送到电脑端。如果用户无任何操作，在一定时间之后，手机端在发出声音或震动。</li>
+<li>在电脑端增加手机通知开关，并且设定收到信息规定时间电脑端无操作，手机后继震动。<br>个人感觉第三种方式最好。</li>
+</ol>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/04/09/ai-search/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          产品简析-Ai Search
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/04/03/知乎回答：手机里装超过100个app是什么体验？/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">知乎回答：手机里装超过100个app是什么体验？</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="搜狗输入法优化建议" data-title="搜狗输入法&amp;微信优化建议" data-url="http://yangxiaolei.me/2015/04/05/搜狗输入法优化建议/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"yangxiaolei"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 杨晓磊
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/mobile.js" type="text/javascript"></script>
+
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62545464-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>产品简析-逗拍 | Yang xiaolei&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="那天老妈分享给我一段视频。亲戚的大头贴充当动态头像，在视频里边蹦蹦跳跳，非让我也给她装这个软件。于是乎搜索了一下，发现是个叫“逗拍”的应用。而且这个应用这两天在AppStore里边排位还非常高，于是在简单体验了一番（iOS），做个简单分析：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="产品简析-逗拍">
+<meta property="og:url" content="http://yangxiaolei.me/2015/02/11/产品简析-逗拍/">
+<meta property="og:site_name" content="Yang xiaolei's blog">
+<meta property="og:description" content="那天老妈分享给我一段视频。亲戚的大头贴充当动态头像，在视频里边蹦蹦跳跳，非让我也给她装这个软件。于是乎搜索了一下，发现是个叫“逗拍”的应用。而且这个应用这两天在AppStore里边排位还非常高，于是在简单体验了一番（iOS），做个简单分析：">
+<meta property="og:image" content="/img/产品简析-逗拍/功能交互.png">
+<meta property="og:image" content="/img/产品简析-逗拍/AppStore下载数据.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="产品简析-逗拍">
+<meta name="twitter:description" content="那天老妈分享给我一段视频。亲戚的大头贴充当动态头像，在视频里边蹦蹦跳跳，非让我也给她装这个软件。于是乎搜索了一下，发现是个叫“逗拍”的应用。而且这个应用这两天在AppStore里边排位还非常高，于是在简单体验了一番（iOS），做个简单分析：">
+
+  
+    <link rel="alternative" href="/atom.xml" title="Yang xiaolei&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img lazy-src="/img/DSCN0520_meitu_1.jpg" class="js-avatar">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">杨晓磊</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">让知识成为信仰，让优秀成为习惯</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="weibo" target="_blank" href="http://weibo.com/3547961937/profile?topnav=1&wvr=6" title="weibo">weibo</a>
+					        
+								<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/lance-yang-56" title="zhihu">zhihu</a>
+					        
+								<a class="mail" target="_blank" href="mailto://god@yangxiaolei.me" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/App/" style="font-size: 14.00px;">App</a><a href="/tags/Hexo/" style="font-size: 16.00px;">Hexo</a><a href="/tags/markdown/" style="font-size: 10.00px;">markdown</a><a href="/tags/个人思考/" style="font-size: 18.00px;">个人思考</a><a href="/tags/交互设计/" style="font-size: 10.00px;">交互设计</a><a href="/tags/产品分析/" style="font-size: 20.00px;">产品分析</a><a href="/tags/基础知识/" style="font-size: 10.00px;">基础知识</a><a href="/tags/用户体验/" style="font-size: 12.00px;">用户体验</a><a href="/tags/瞎鼓捣/" style="font-size: 10.00px;">瞎鼓捣</a><a href="/tags/竞品分析/" style="font-size: 10.00px;">竞品分析</a><a href="/tags/笔面试题/" style="font-size: 18.00px;">笔面试题</a><a href="/tags/读书笔记/" style="font-size: 12.00px;">读书笔记</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">半吊子PM、帝都土著、伪果粉、真诺粉、长旅行、爱公益、10+years篮球迷</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">杨晓磊</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/DSCN0520_meitu_1.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">杨晓磊</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">让知识成为信仰，让优秀成为习惯</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="weibo" target="_blank" href="http://weibo.com/3547961937/profile?topnav=1&wvr=6" title="weibo">weibo</a>
+			        
+						<a class="zhihu" target="_blank" href="http://www.zhihu.com/people/lance-yang-56" title="zhihu">zhihu</a>
+			        
+						<a class="mail" target="_blank" href="mailto://god@yangxiaolei.me" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-产品简析-逗拍" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/02/11/产品简析-逗拍/" class="article-date">
+  	<time datetime="2015-02-11T03:41:49.000Z" itemprop="datePublished">Feb 11 2015</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      产品简析-逗拍
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/产品分析/">产品分析</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>那天老妈分享给我一段视频。亲戚的大头贴充当动态头像，在视频里边蹦蹦跳跳，非让我也给她装这个软件。于是乎搜索了一下，发现是个叫“逗拍”的应用。而且这个应用这两天在AppStore里边排位还非常高，于是在简单体验了一番（iOS），做个简单分析：<br><a id="more"></a></p>
+<ul>
+<li><p>产品简介：<br>逗拍 -大头视频制作神器。2014年12月2日上线，目前发布了4个版本。主要功能是大头视频制作与分享。类型应该类似于以往火爆过的脸萌、魔漫相机等。</p>
+</li>
+<li><p>目标用户：<br>喜欢新奇、热爱分享的用户。</p>
+</li>
+<li><p>使用场景：</p>
+<ul>
+<li>用户点开应用，选择视频模板，选择大头照片，生成大头视频，分享大头视频</li>
+<li>用户点开应用，播放本机生成过的视频给周围朋友观看。</li>
+</ul>
+</li>
+<li><p>功能与交互概况：<br><img src="/img/产品简析-逗拍/功能交互.png" alt=""></p>
+</li>
+<li><p>App更新记录：<br>App2014-12-2上线，此后经历了4个版本。</p>
+<ul>
+<li>版本 1.0.3 (2015年1月29日)<br>修复了 1.0.2 视频下载失败以及 QQ 分享失败的 Bug<br>强烈推荐安装了 1.0.2 版本的用户马上更新</li>
+<li>版本 1.0.2 (2015年1月27日)<br>新增保存视频到手机相册功能，你可以很方便分享给好友；<br>允许同时下载2个视频，好用不费电！<br>修复些许bug，工程师累晕在 iMac 旁；</li>
+<li>版本 1.0.1 (2014年12月21日)<br>分享更简单方便<br>新增各种逗趣模板<br>增加了评论功能<br>修复某些你肉眼看不到的bug<br>支持 iOS6</li>
+<li>版本 1.0 (2014年12月2日)</li>
+</ul>
+</li>
+<li><p>AppStore下载数据：<br>从图中可以看出进入一月后，下载量明显上升，在特别是在摄影类别中名列前茅。可以说产品进入了用户飞速增长期。<br><img src="/img/产品简析-逗拍/AppStore下载数据.png" alt=""></p>
+</li>
+<li>产品亮点：<ul>
+<li>重视用户反馈<br>用户反馈的<strong>入口</strong>非常明显，说明此产品非常重视用户的反馈（至少给用户这样的感觉），这对于新生产品非常重要。</li>
+<li>上线时机很好<br>随着智能手机的普及，以及网络条件改善，短视频类的分享应用十分火爆。逗拍这种diy性质的产品，前有魔漫相机、脸萌在图片端的成功，同时结合最近即将到来的<strong>情人节、春节</strong>，做好运营，新增用户量应该还会有大量的增长。</li>
+</ul>
+</li>
+<li>问题与瓶颈：<ul>
+<li>产品大方向：<ul>
+<li>竞争壁垒较低<br>目前短视频类的产品很多，例如美拍、微视等。如何面对竞品迭代可能的模仿，是这款新生App首先要面对的。</li>
+<li>如果留住用户<br>就像前面说的，单纯的工具类应用前有魔漫相机、脸萌，都曾昙花一现。基于模板的应用，如何产生足够新鲜的UGC，如何能够留住用户才是这款产品发展的关键。从逗拍在“我的视频”中的产品页面布局肯已看出其以后也可能要引入社交功能，让用户在App本身分享，评论、点赞，从而增强用户黏性，具体效果只能持续关注。</li>
+</ul>
+</li>
+<li>产品本身：<ul>
+<li>产品稳定性不足<br>虽然是新产品，但是从下载数据可以看到新增用户非常多，初期的版本稳定性十分重要。在我的使用体验过程中，多次出现闪退的情况，体验需要加强。同时在1.27,1.29连发了2个版本，说明之前的版本也是带有明显漏洞的。</li>
+<li>模板的选取<br>这款应用的特色在于模板与大头贴。目前的模板数量一般，主要以搞笑风格为主。而且每次点击需要在线下载模版，而无法提前预览，这点比较伤用户。后期应该压缩模板到App本身，同时加入更多精美的模板，部分优质内容可以考虑收费。</li>
+<li>大头贴的制作<br>在体验过程中，制作出合适的大头贴并不容易。目前的流程是选择脸型（部分模板只有一个）-》选择拍照或相册-》调整脸型（大小、方向）。现有的脸型模板太少了，很多照片套进去效果都不够好，需要调整很久。这里需要加强人脸识别算法的优化，自动识别脸型，根据实际的照片推荐或生成最合适的脸型模板，这样的流程才能达到最好的用户体验。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/02/11/hexo-windows下部署问题与解决/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Hexo windows下部署问题与解决
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/02/05/favourite-app2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">那些我所钟爱的App（iOS）-2</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="产品简析-逗拍" data-title="产品简析-逗拍" data-url="http://yangxiaolei.me/2015/02/11/产品简析-逗拍/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"yangxiaolei"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 杨晓磊
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/mobile.js" type="text/javascript"></script>
+
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62545464-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  </div>
+</body>
+</html>
