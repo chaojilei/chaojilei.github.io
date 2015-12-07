@@ -195,86 +195,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>产品狗虽然对代码没啥要求，但是因为接触数据的缘故，平日难免与sql打交道。<br>借此机会复习下sql的基本语法。主要是一些小点，适合查缺补漏。</p>
-<h1 id="第一章_了解sql">第一章 了解sql</h1>
-<p>表<br>数据库中的结构化清单</p>
-<p>列<br>每个表有多个列组成，列可以理解为指标。</p>
-<p>行<br>每一行是特定的内容。</p>
-<p>主键<br>能够标识表中每行的那个列<br>任意两行不相同<br>每行都必须有值，不能使NULL<br>从表中删除某一行，主键不能赋给以后的新行</p>
-<h1 id="第二章_检索数据">第二章 检索数据</h1>
-<p>本身select出来的内容顺序不一定（不排序、不过滤）</p>
-<p>select *  查询所有列，一般顺序是定义时的物理顺序</p>
-<h1 id="第三章_排序检索数据">第三章 排序检索数据</h1>
-<p>利用关键字 order by 将查询结果排序</p>
-<p>一般出现在select语句的最后一条字句</p>
-<p>排序方式可以不是select中出现的列，只要在表中就可以</p>
-<p>order by 可以对多列排序</p>
-<p>按照写出的顺序，第一列相同，按照第二列排</p>
-<p>order by 同样可以直接写列的顺序<br>例子：order by 2,3</p>
-<p>降序排列<br>在降序的列名后边加上关键字 <strong>DESC</strong> ，不能小写<br>默认不写的都是升序</p>
-<h1 id="第四章_过滤条件">第四章 过滤条件</h1>
-<p>where字句在order by之前</p>
-<p>where子句中 between表示在两者之间，是闭区间，包括开始和结束的数值。</p>
-<p>如果限定条件的内容类型是字符，需要用单引号圈住内容</p>
-<h1 id="第五章_高级数据过滤">第五章 高级数据过滤</h1>
-<p>限制操作符<br>and优先级高于or。多个条件用括号相连接</p>
-<p>in操作符<br>内容用用括号包含，逗号隔开</p>
-<p>not关键字<br>用于否定后边相连的条件（MYSQL只支持NOT EXISTS）</p>
-<h1 id="第六章_用通配符过滤">第六章 用通配符过滤</h1>
-<p>用关键字like引导搜索模式</p>
-<p>%——任意字符出现任意次数，也可以是0次<br>注意：有些DBMS以空格结束，所以检索’F%Y’时，需要以%结尾<br>_——任意单个字符一次</p>
-<h1 id="第七章_计算字段">第七章 计算字段</h1>
-<p>在select中创建，不是本身存在的列</p>
-<p>作用1：连接列</p>
-<p>使用+  或者 ||  连接<br>在mysql中使用concat函数连接，连接的内容用逗号隔开</p>
-<p>AS别名，可以给列起别名<br>select concat(xxx,xxxxx) AS XXXX FROM XX;</p>
-<p>作用2：进行计算<br>select  a*b AS c from xxx;</p>
-<h1 id="第八章_函数">第八章 函数</h1>
-<p>例子：<br>UPPER()  串转化为大写<br>LOWWER()  串转化为小写<br>还有很多类似的函数，不同的DBMS函数名不同，具体使用时查询即可。</p>
-<p>SOUNDEX——发音类似函数<br>例子： Michael 类似于 Michelle</p>
-<h1 id="第九章_汇总数据">第九章 汇总数据</h1>
-<p>聚集函数<br>AVG()——求单个列的均值，会忽略NULL<br>COUNT()——求行个数，有具体列名，则忽略NULL，否则不忽略<br>MAX()——返回指定列的最大值，忽略NULL<br>MIN()——返回指定列的最小值，忽略NULL<br>SUM()——求和，忽略NULL</p>
-<p>关键字DISTICT忽略重复的数值</p>
-<h1 id="第十章_分组数据">第十章 分组数据</h1>
-<p>某些情况下，将数据首先分组，然后在每组中，进行数据的操作。<br>使用group by关键字</p>
-<p>注意事项：<br>group by 在where之后，在order by之前<br>NULL值会被分到单独的一组<br>group by可以嵌套，最后的结果是多重嵌套的结果<br>子句中，必须是检索列或者有效的表达式（不能说聚集函数），不能用别名<br>select中的每个列都必须在group by中给出</p>
-<p>过滤分组<br>对行的操作，用where关键字，<br>对分组的操作，用HAVING关键字</p>
-<p>HAVING语法与where类似，where在分组前过滤，having在分组后过滤</p>
-<p>一般的语句顺序<br>1.select<br>2.from<br>3.where<br>4.group by<br>5.having<br>6.order by</p>
-<h1 id="第十一章_使用子查询">第十一章 使用子查询</h1>
-<h2 id="利用子查询过滤">利用子查询过滤</h2>
-<p>where 里边嵌套其他的查询结果</p>
-<p>嵌套的一般都是查询单个列的结果。</p>
-<h2 id="创建计算字段">创建计算字段</h2>
-<p>用select查询另外一个表的结果，将结果返回作为本次查询的一个列</p>
-<p>注意：为了明确两个表的关系，需要写全列名。</p>
-<h1 id="第十二章_联结">第十二章 联结</h1>
-<p>通过列的映射关系将表联结，在select时可以检索数据</p>
-<p>每次在select时才会联结，所以需要在where中指出联结方式</p>
-<p>from 所有需要联结的表，where给出联结条件。</p>
-<h2 id="内联结">内联结</h2>
-<p>把两个表值相等的行拉出来，是内联结。可以使用   表1  INNER JOIN   表2 on 表1.id=表2.id</p>
-<h2 id="多表联结">多表联结</h2>
-<p>from 表1，表2，表3<br>where 给出表之间的关系</p>
-<h1 id="第十三章_创建高级联结">第十三章 创建高级联结</h1>
-<p>AS同样可以对表起别名。便于引用</p>
-<h2 id="自联结">自联结</h2>
-<p>使用一个表中的数据联结，感觉与子查询类似<br>通过AS给表起别名</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="operator"><span class="keyword">select</span> c1.id, c1.name, c1.age</span></div><div class="line"><span class="keyword">from</span> xxx <span class="keyword">AS</span> c1,  xxx <span class="keyword">AS</span> c2</div><div class="line"><span class="keyword">where</span> c1,id = c2.id</div><div class="line"><span class="keyword">and</span> c2.age= xxx;</div></pre></td></tr></table></figure>
-
-<p>利用子查询的写法：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="operator"><span class="keyword">select</span> id, name , age</span></div><div class="line"><span class="keyword">from</span> xxx</div><div class="line"><span class="keyword">where</span> age= (<span class="keyword">select</span> age</div><div class="line">            <span class="keyword">from</span> xxx</div><div class="line">            <span class="keyword">where</span> age= xxx;);</div></pre></td></tr></table></figure>
-
-<h2 id="外联结">外联结</h2>
-<p>与内联结相比，可以取到没有关联行的那些行。可以取到null值的情况</p>
-<p>left outer join  则是左联结，左边的表中所有的行都可以检索出来</p>
-<p>right outer join 则是右联结，右边的表中所有的行都可以检索出来</p>
-<h1 id="第十四章_组合查询">第十四章 组合查询</h1>
-<h2 id="UNION">UNION</h2>
-<p>多条select语句，可以使用union输出到一个表里边</p>
-<p>注意：union查询的列、表达式、函数必须相同</p>
-<p>union可以针对多个表格<br>union会把检索出来的所有行进行去重处理<br>union all  则返回所有的结果</p>
-<p>如果进行排序，只有在最后存在一条order by</p>
-
+<p>
       
     </div>
     
@@ -286,6 +207,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/07/sql小结/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
