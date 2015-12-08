@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>sql小结 | Yang xiaolei&#39;s blog</title>
+  <title>SQL小结 | Yang xiaolei&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="产品狗虽然对代码没啥要求，但是因为接触数据的缘故，平日难免与sql打交道。借此机会复习下sql的基本语法。主要是一些小点，适合查缺补漏。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sql小结">
+<meta property="og:title" content="SQL小结">
 <meta property="og:url" content="http://yangxiaolei.me/2015/12/07/sql小结/">
 <meta property="og:site_name" content="Yang xiaolei's blog">
 <meta property="og:description" content="产品狗虽然对代码没啥要求，但是因为接触数据的缘故，平日难免与sql打交道。借此机会复习下sql的基本语法。主要是一些小点，适合查缺补漏。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sql小结">
+<meta name="twitter:title" content="SQL小结">
 <meta name="twitter:description" content="产品狗虽然对代码没啥要求，但是因为接触数据的缘故，平日难免与sql打交道。借此机会复习下sql的基本语法。主要是一些小点，适合查缺补漏。">
 
   
@@ -106,7 +106,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/App/" style="font-size: 13.33px;">App</a><a href="/tags/Hexo/" style="font-size: 15.00px;">Hexo</a><a href="/tags/markdown/" style="font-size: 10.00px;">markdown</a><a href="/tags/sql/" style="font-size: 10.00px;">sql</a><a href="/tags/个人思考/" style="font-size: 18.33px;">个人思考</a><a href="/tags/交互设计/" style="font-size: 10.00px;">交互设计</a><a href="/tags/产品分析/" style="font-size: 20.00px;">产品分析</a><a href="/tags/基础知识/" style="font-size: 10.00px;">基础知识</a><a href="/tags/用户体验/" style="font-size: 11.67px;">用户体验</a><a href="/tags/瞎鼓捣/" style="font-size: 10.00px;">瞎鼓捣</a><a href="/tags/竞品分析/" style="font-size: 10.00px;">竞品分析</a><a href="/tags/笔面试题/" style="font-size: 16.67px;">笔面试题</a><a href="/tags/读书笔记/" style="font-size: 11.67px;">读书笔记</a>
+						<a href="/tags/App/" style="font-size: 14.29px;">App</a><a href="/tags/Hexo/" style="font-size: 15.71px;">Hexo</a><a href="/tags/SQL/" style="font-size: 11.43px;">SQL</a><a href="/tags/markdown/" style="font-size: 11.43px;">markdown</a><a href="/tags/sql/" style="font-size: 10.00px;">sql</a><a href="/tags/个人思考/" style="font-size: 18.57px;">个人思考</a><a href="/tags/交互设计/" style="font-size: 11.43px;">交互设计</a><a href="/tags/产品分析/" style="font-size: 20.00px;">产品分析</a><a href="/tags/基础知识/" style="font-size: 11.43px;">基础知识</a><a href="/tags/用户体验/" style="font-size: 12.86px;">用户体验</a><a href="/tags/瞎鼓捣/" style="font-size: 11.43px;">瞎鼓捣</a><a href="/tags/竞品分析/" style="font-size: 11.43px;">竞品分析</a><a href="/tags/笔面试题/" style="font-size: 17.14px;">笔面试题</a><a href="/tags/读书笔记/" style="font-size: 12.86px;">读书笔记</a>
 					</div>
 				</section>
 				
@@ -183,7 +183,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      sql小结
+      SQL小结
     </h1>
   
 
@@ -192,7 +192,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li></ul>
 	</div>
 
         
@@ -284,6 +284,51 @@
 <p>注意：union查询的列、表达式、函数必须相同</p>
 <p>union可以针对多个表格<br>union会把检索出来的所有行进行去重处理<br>union all  则返回所有的结果</p>
 <p>如果进行排序，只有在最后存在一条order by</p>
+<h1 id="第十五章_插入数据">第十五章 插入数据</h1>
+<h2 id="插入单行">插入单行</h2>
+<p>格式如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="operator"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Customers(cust_id, cust_name, cust_address, cust_city, cust_state, cust_zip, cust_country, cust_contact, cust_email)</span></div><div class="line"><span class="keyword">VALUES</span>(<span class="string">'1000000003'</span>, <span class="string">'Fun4All'</span>, <span class="string">'1 Sunny Place'</span>, <span class="string">'Muncie'</span>, <span class="string">'IN'</span>, <span class="string">'42222'</span>, <span class="string">'USA'</span>, <span class="string">'Jim Jones'</span>, <span class="string">'jjones@fun4all.com'</span>);</div></pre></td></tr></table></figure>
+
+<h2 id="插入部分行">插入部分行</h2>
+<p>INSERT可以插入完整的单行，也可以插入某行的部分内容。</p>
+<p>插入时，需要指出具体插入的内容是哪一列的，不插入的内容默认为NULL，如果不能是NULL，则会报错</p>
+<p>插入检索出来的结果</p>
+<h2 id="INSERT_SELECT">INSERT SELECT</h2>
+<p>将select出来的内容全插入<br>例子：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="operator"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Customers(cust_id, cust_name, cust_address, cust_city, cust_state, cust_zip, cust_country, cust_contact, cust_email)</span></div><div class="line"><span class="keyword">SELECT</span> cust_id, cust_name, cust_address, cust_city, cust_state, cust_zip, cust_country, cust_contact, cut_email <span class="keyword">FROM</span> Customers2;</div></pre></td></tr></table></figure>
+
+<h2 id="SELECT_INTO">SELECT INTO</h2>
+<p>相当于新建一张表，将检索出来的内容插到新表格中<br>例子：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="operator"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> XXXX1 <span class="keyword">AS</span></span></div><div class="line"><span class="keyword">SELECT</span> * </div><div class="line"><span class="keyword">FROM</span> XXX2;</div></pre></td></tr></table></figure>
+
+<h1 id="第十六章_更新和删除数据">第十六章 更新和删除数据</h1>
+<p>注意where子句来限定更新的范围</p>
+<h2 id="更新单行内容">更新单行内容</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">UPDATE XXX1</div><div class="line"><span class="keyword">SET</span> XXX= ‘FFEWFWEF’,</div><div class="line">XXXXX=‘FFRG4545<span class="comment">'</span></div><div class="line"></div><div class="line"><span class="keyword">WHERE</span> XXXXXXX=‘GG54G54<span class="comment">'</span></div></pre></td></tr></table></figure>
+
+<p>删除某个值可以将值的内容更新为NULL</p>
+<h2 id="删除某行">删除某行</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="operator"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> XXX1</span></div><div class="line"><span class="keyword">WHERE</span> XXXXXXX=‘GG54G54<span class="string">'</span></div></pre></td></tr></table></figure>
+
+<p>注意DELETE删除的是某一整行，或者多个整行</p>
+<p>如果想删除某个列的值，使用update</p>
+<p>如果想删除的是整个表，使用drop</p>
+<h1 id="第十七章_创建表">第十七章 创建表</h1>
+<h2 id="创建表">创建表</h2>
+<p>例子：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="operator"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Products</span></div><div class="line">(</div><div class="line">  prod_id    <span class="built_in">char</span>(<span class="number">10</span>)      <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">1</span>,</div><div class="line">  vend_id    <span class="built_in">char</span>(<span class="number">10</span>)      <span class="keyword">NOT</span> <span class="literal">NULL</span> ,</div><div class="line">  prod_name  <span class="built_in">char</span>(<span class="number">255</span>)     <span class="keyword">NOT</span> <span class="literal">NULL</span> ,</div><div class="line">  prod_price <span class="built_in">decimal</span>(<span class="number">8</span>,<span class="number">2</span>)  <span class="keyword">NOT</span> <span class="literal">NULL</span> ,</div><div class="line">  prod_desc  <span class="built_in">text</span>          <span class="literal">NULL</span></div><div class="line">);</div></pre></td></tr></table></figure>
+
+<h2 id="删除整个表用DROP">删除整个表用DROP</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="operator"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> xxxxx;</span></div></pre></td></tr></table></figure>
+
+<h1 id="第十八章_视图">第十八章 视图</h1>
+<p>视图是虚拟的表</p>
+<p>使用视图可以简化复杂的联结<br>用视图可以重新格式化检索出来的数据<br>用视图过滤不想要的数据</p>
+<h2 id="创建格式">创建格式</h2>
+<p>····<br>CREATE VIEW XXXX_view AS<br>SELECT XXXXX<br>FROM XXXX<br>WHERE XXXXX =DDDDD;<br>····</p>
+<h2 id="引用">引用</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="operator"><span class="keyword">select</span> * <span class="keyword">from</span> XXXX_view <span class="keyword">where</span> …;</span></div></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -324,7 +369,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="sql小结" data-title="sql小结" data-url="http://yangxiaolei.me/2015/12/07/sql小结/"></div>
+	<div class="ds-thread" data-thread-key="sql小结" data-title="SQL小结" data-url="http://yangxiaolei.me/2015/12/07/sql小结/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
